@@ -22,11 +22,13 @@ export default function RootLayout({ children }) {
       data-theme="light"
       className={` ${outfit.className} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body >
 
         <Navbar />
         
-        {children}
+        <main  className="max-w-7xl mx-auto">
+          {children}
+        </main>
 
         <Footer/>
         

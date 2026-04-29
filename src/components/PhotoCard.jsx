@@ -1,5 +1,6 @@
 import { Button, Card, Chip, Separator } from '@heroui/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { FaDownload } from 'react-icons/fa';
 import { GiHearts } from 'react-icons/gi';
@@ -38,9 +39,9 @@ const PhotoCard = ({photo}) => {
                 </div>
 
                </div>
-               <button className='mt-4 outline  py-2 px-4 rounded-lg hover:bg-blue-600'>
-                    View
-                </button>
+              <Link href={`/all-photos/${photo.id}`}>
+                <Button variant='outline' className='w-full mt-4'>View Details</Button>
+              </Link>
             </Card>
         </div>
     );
